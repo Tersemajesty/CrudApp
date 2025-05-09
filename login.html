@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crude-App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="container1">
+      <h1>Login</h1>
+      <form id="Loginform" class="form">
+        <input class="input" type="text" id="username" placeholder="username" />
+        <input class="input" type="password" id="password" placeholder="password" />
+
+        <button class="btn" id="loginBtn">Login</button>
+        <h1 class="h1">
+          Don't have an account?
+          <a href="signup.html"><strong>Sign Up</strong></a>
+        </h1>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("Loginform").addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const loginBtn = document.getElementById("loginBtn");
+      loginBtn.disabled = true;
+      loginBtn.textContent = "Logging in...";
+
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value;
+
+      setTimeout(() => {
+        if (!username || !password) {
+          alert("Please enter both username and password.");
+          loginBtn.disabled = false;
+          loginBtn.textContent = "Login";
+          return;
+        }
+
+        const storedUser = JSON.parse(localStorage.getItem("user"));
+
+        if (storedUser && storedUser.username === username && storedUser.password === password) {
+          alert("Login successful!");
+          window.location.href = "index.html";
+        } else {
+          alert("Invalid credentials. Please try again.");
+          loginBtn.disabled = false;
+          loginBtn.textContent = "Login";
+        }
+      }, 1000); 
+    });
+  </script>
+</body>
+</html>

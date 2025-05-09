@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud-App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="containerdiv">
+            <div class="container1div">
+                <h1>DashBoard</h1>
+                <form id="UserForm" class="formdiv">
+                    <input class="inputdiv" type="text" id="name" placeholder="Name" required />
+                    <input class="inputdiv" type="email" id="email" placeholder="Email" required />
+                    <button class="btndiv" type="submit" id="submitBtn">Add User</button>
+                  </form>
+                  
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody id="userTableBody"></tbody>
+                  </table>
+                  
+            </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

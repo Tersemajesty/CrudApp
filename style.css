@@ -1,0 +1,186 @@
+body{
+    padding: opx;
+    font-family: arial, sans-serif;
+}
+
+.container{
+    width: 97%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container1{
+    background: white;
+    height: 85%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 35%;
+    display: flex;
+    align-items: center;
+    padding-top: 19px;
+    flex-direction: column ;
+    border-radius: 20px;
+}
+
+.form{
+    height: 70%;
+    gap: 10%;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.input{
+    width: 75%;
+    height: 8%;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.btn{
+    height: 15%;
+    width: 30%;
+    background: blue;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.h1{
+    font-size: 15px;
+
+    & strong {
+        color: blue;
+        cursor: pointer;
+        text-decoration-line: none;
+
+    }
+}
+
+table{
+    width: 100%;
+    border-collapse:collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+body{
+    padding: opx;
+    font-family: arial, sans-serif;
+}
+
+.containerdiv{
+    width: 99%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container1div{
+    height: 85%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 35%;
+    display: flex;
+    align-items: center;
+    padding-top: 19px;
+    flex-direction: column ;
+    border-radius: 20px;
+}
+
+.formdiv{
+    height: 39%;
+    gap: 10%;
+    padding-top: 10px;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.inputdiv{
+    width: 79%;
+    height: 10%;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.btndiv{
+    height: 23%;
+    width: 20%;
+    background: blue;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+
+.h1{
+    font-size: 15px;
+
+    & strong {
+        color: blue;
+        cursor: pointer;
+        text-decoration-line: none;
+
+    }
+}
+
+table{
+    width: 100%;
+    border-collapse:collapse;
+    margin-top: 20px;
+}
+
+th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+ button{
+    background: blue;
+    border: none;
+    outline: none;
+    height: 20%;
+    color: white;
+    width: 46%;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+
+
+@media  (max-width: 768px) {
+   .container{
+   } 
+
+   .container1{
+    width: 100%;
+   }
+}
+
+@media  (max-width: 768px) {
+   .container{
+   } 
+
+   .container1{
+    width: 100%;
+   }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crude-App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="container1">
+      <h1>Sign Up</h1>
+      <form id="Signupform" class="form">
+        <input class="input" type="text" id="username" placeholder="username" />
+        <input class="input" type="password" id="password" placeholder="password" />
+        <input class="input" type="password" id="confirm-password" placeholder="confirm password" />
+        
+        <button type="submit" class="btn" id="signupBtn">Sign Up</button>
+        <h1 class="h1">
+          Already have an account?
+          <a href="login.html"><strong>Login</strong></a>
+        </h1>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("Signupform").addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const signupBtn = document.getElementById("signupBtn");
+      signupBtn.disabled = true;
+      signupBtn.textContent = "Signing up...";
+
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirm-password").value;
+
+      setTimeout(() => {
+        if (!username || !password || !confirmPassword) {
+          alert("Please fill in all fields.");
+          signupBtn.disabled = false;
+          signupBtn.textContent = "Sign Up";
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          alert("Passwords do not match!");
+          signupBtn.disabled = false;
+          signupBtn.textContent = "Sign Up";
+          return;
+        }
+
+        const user = { username, password };
+        localStorage.setItem("user", JSON.stringify(user));
+
+        alert("Signup successful! Please login.");
+        window.location.href = "login.html";
+      }, 1000); // simulate loading
+    });
+  </script>
+</body>
+</html>
